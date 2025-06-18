@@ -2,9 +2,9 @@ services:
   - type: web
     name: downloader-api
     runtime: python
-    repo: https://github.com/tradevanataweb/download
+    repo: https://github.com/YOUR_USERNAME/YOUR_REPO
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python server.py"
+    startCommand: "gunicorn server:app"
     envVars:
       - key: PYTHON_VERSION
         value: 3.11

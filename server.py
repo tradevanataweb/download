@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
 from downloader import download_content
+from flask_cors import CORS # Import CORS
 
 app = Flask(__name__)
+CORS(app) # Enable CORS for all routes and origins
 
 @app.route("/download", methods=["POST"])
 def handle_download():
